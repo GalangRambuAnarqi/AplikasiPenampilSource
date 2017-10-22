@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         myText=(TextView) findViewById(R.id.myResult);
-
+        myText.setBackgroundResource(R.layout.back);
         final String[] pilihan={"http://","https://"};
         //cek koneksi
 
@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
     public void doSomething(View view) {
         c1=new ConnectInternetTask(this);
         EditText edt=(EditText) findViewById(R.id.editText);
+
         //cek koneksi && cek apakah input text kosong
         if(myinfo!=null&&myinfo.isConnected()){
             if(edt!=null){
